@@ -16,8 +16,8 @@ pipeline {
         TAG = "${params.DOCKER_TAG}"
         KUBE_NAMESPACE = 'webapps'
         AWS_ACCOUNT_ID = credentials('ACCOUNT_ID')
-        AWS_ECR_FRONTEND_REPO_NAME = credentials('ECR_B')
-        AWS_ECR_BACKEND_REPO_NAME = credentials('ECR_B')
+        AWS_ECR_FRONTEND_REPO_NAME = credentials('ECR1')
+        AWS_ECR_BACKEND_REPO_NAME = credentials('ECR2')
         AWS_DEFAULT_REGION = 'us-east-1'
         REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/"
         NVD_API_KEY = credentials('nvd-api-key')
